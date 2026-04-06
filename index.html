@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xora & Selena</title>
+    <style>
+        :root {
+            --abyss-purple: #2a0845;
+            --elven-glow: #9d50bb;
+            --accent-pink: #ff00ff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Arka plan partikül efekti */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle, rgba(157, 80, 187, 0.1) 0%, transparent 80%);
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid var(--elven-glow);
+            box-shadow: 0 0 30px rgba(157, 80, 187, 0.4);
+            backdrop-filter: blur(10px);
+            max-width: 500px;
+            width: 90%;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            background: linear-gradient(to right, #fff, var(--elven-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+        }
+
+        .sub-title {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 2rem;
+        }
+
+        .selena-quote {
+            font-style: italic;
+            color: var(--elven-glow);
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+
+        .heart {
+            color: var(--accent-pink);
+            font-size: 4rem;
+            animation: beat 1.2s infinite;
+            margin: 20px 0;
+        }
+
+        .message {
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Selena'nın oku (Arrow) efekti için buton */
+        .btn-magic {
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid var(--elven-glow);
+            color: white;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-magic:hover {
+            background: var(--elven-glow);
+            box-shadow: 0 0 20px var(--elven-glow);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="stars"></div>
+
+    <div class="container">
+        <h1 class="hero-title">XORA</h1>
+        <p class="sub-title">The Abyss Witch's Favorite</p>
+        
+        <div class="heart">❤</div>
+
+        <div class="message">
+            <p>Selena rakiplerini büyülediği gibi,</p>
+            <p>Sen de her anımda beni büyülüyorsun.</p>
+        </div>
+
+        <div class="selena-quote">
+            "When you gaze into the abyss, the abyss gazes back!"
+        </div>
+
+        <p style="font-size: 0.9rem; margin-top: 20px; color: #888;">
+            Seni çok seviyorum Xora.
+        </p>
+
+        <a href="#" class="btn-magic" onclick="alert('Abyss Arrow kalbime isabet etti! 🏹💜')">Bana Tıkla</a>
+    </div>
+
+</body>
+</html>
